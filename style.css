@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    transition: 0.5s ease;
+}
+
+header .search {
+    color: #fff;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .search a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .search a:hover {
+    color: #f1f1f1;
+}
+
+header .brand img {
+    width: 55px;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items .brand {
+    padding-left: 5px;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .search a {
+    font-weight: 500;
+    position: relative;
+}
+
+header .search a:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .search a:hover:after {
+    width: 100%;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+section {
+    padding: 580px 200px 50px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.video-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.2s ease-in-out;
+}
+
+.video-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home .content {
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    text-align: center;
+    margin-top: 50px;
+    pointer-events: none;
+}
+
+.home .content h1 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
+    white-space: nowrap;
+}
+
+#videoDescription {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    white-space: nowrap;
+}
+
+#videolinks {
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.home .media-icons {
+    z-index: 888;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    transition: 0.5s ease;
+}
+
+.home .media-icons a {
+    color: #fff;
+    font-size: 1.6em;
+    transition: transform 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.home .media-icons a:hover {
+    transform: scale(1.3);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+@keyframes bottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in.bottom-to-top {
+    animation: bottomToTop 0.8s ease-out forwards;
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+
+    .home .media-icons {
+        right: 15px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    .menu-btn {
+        background: url(pn.png) no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+}
